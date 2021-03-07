@@ -161,6 +161,31 @@
 					width: 100%;
 				}
 			}
+
+			.footer {
+				background-color: #2251b2;
+				padding: 3em;
+			}
+			.footer__links {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.footer__link {
+				display: flex;
+				align-items: center;
+				color: white;
+				text-decoration: none;
+			}
+			.footer__link:hover {
+				text-decoration: underline;
+			}
+			.link__icon {
+				width: 2em;
+				height: 2em;
+				margin-right: 0.5em;
+			}
 		</style>
 		<title>Document</title>
 	</head>
@@ -263,5 +288,37 @@
 				</article>
 			</section>
 		</main>
+		<footer class="footer">
+			<ul class="footer__links">
+				<li>
+					<a class="footer__link" href="https://github.com/MaxTyshkevich"
+						>My profile GitHub</a
+					>
+				</li>
+				<li>
+					<a class="footer__link" href="https://rs.school/js/"
+						><img
+							class="link__icon"
+							src="rs_school_js.svg"
+							alt="icon_rs.school"
+						/>
+						Курс «JavaScript/Front-end»</a
+					>
+				</li>
+				<li>
+					<a
+						class="footer__link"
+						href="https://www.youtube.com/watch?v=Ji52SxpEnxc&t=2191s"
+					>
+						<img
+							class="link__icon"
+							src="YouTube_full-color_icon_(2017).svg"
+							alt="icon_Youtube"
+						/>
+						Friday Live Coding. Part 6</a
+					>
+				</li>
+			</ul>
+		</footer>
 	</body>
 </html>
