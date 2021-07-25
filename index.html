@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML, CSS & Git Basics</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <aside class="aside">
+        <div class="photo">
+          <img src="./photo-makson.jpg" alt="my-photo" />
+        </div>
+        <section class="info">
+          <h3 class="sub-title sub-title--light">contact me</h3>
+          <ul class="list">
+            <li><span class="font-bold">City:</span>Minsk, Belarus.</li>
+            <li>
+              <span class="font-bold">Phone:</span
+              ><a href="tel:+375256568852">+375(25) 656 88 52</a>
+            </li>
+            <li>
+              <span class="font-bold">Email:</span
+              ><a href="mailto:2842778@gmail.com">2842778@gmail.com</a>
+            </li>
+            <li>
+              <span class="font-bold">Discord:</span
+              ><a href="#">MaxPayne#9870</a>
+            </li>
+            <li>
+              <span class="font-bold">Git:</span
+              ><a href="https://github.com/MaxTyshkevich"> MaxTyshkevich</a>
+            </li>
+          </ul>
+        </section>
+        <section class="skills">
+          <h3 class="sub-title sub-title--light">Skills</h3>
+          <div class="skills-container">
+            <label>
+              html
+              <progress value="73" max="100"></progress>
+            </label>
+            <label>
+              css
+              <progress value="70" max="100"></progress>
+            </label>
+            <label>
+              scss
+              <progress value="80" max="100"></progress>
+            </label>
+            <label>
+              git
+              <progress value="75" max="100"></progress>
+            </label>
+            <label>
+              javascript
+              <progress value="80" max="100"></progress>
+            </label>
+          </div>
+        </section>
+        <section class="lang">
+          <h3 class="sub-title sub-title--light">English</h3>
+          <p>
+            Basic User. Upgrade skills in applications. Duolingo and Polyglot
+          </p>
+        </section>
+      </aside>
+      <main class="main">
+        <header class="header">
+          <h1 class="name">Maksim Tyshkevich</h1>
+          <h2 class="work">frontend developer</h2>
+        </header>
+        <section class="code">
+          <h3 class="sub-title sub-title--dark">Code examples</h3>
+          <article>
+            <h4>Task:</h4>
+            <a href="https://www.codewars.com/kata/58d014421c694f71630000bc"
+              >I Promise Not To Optimize</a
+            >
+            <pre>
+            <code>
+            function antiOptimizeAsync(task) {
+              let start = Date.now();
+              return Promise.resolve(task())
+                .then(res => new Promise(resolve => {
+                  setTimeout(
+                    ()=> resolve(res),
+                     11300 - (Date.now() - start))
+                }))
+            }
+            </code>
+          </pre>
+          </article>
+          <article>
+            <h4>Task:</h4>
+            <a href="https://www.codewars.com/kata/5421c6a2dda52688f6000af8"
+              >Function Composition</a
+            >
+            <pre>
+            <code>
+            function compose(...func) {
+              return (...args) => {
+                return func.reduceRight((result,fn) => {
+                  result = fn(...result)
+                  return [result];
+                },args);
+              }
+            }
+          
+            </code>
+            </pre>
+          </article>
+        </section>
+        <section class="education">
+          <h3 class="sub-title sub-title--dark">Education</h3>
+          <p>
+            Secondary special, profession: mechatronics. Solving algorithms
+            Profile
+            <a href="https://www.codewars.com/users/Max%20Tyshkevich"
+              >codewars</a
+            >
+          </p>
+        </section>
+      </main>
+      <footer class="footer">
+        <a href="https://github.com/MaxTyshkevich">My github</a>
+        <div class="logo">
+          <img src="./rs_school_js.svg" alt="logo-rschool" />
+        </div>
+        <a href="https://rs.school/js/">Сourse</a>
+      </footer>
+    </div>
+  </body>
+</html>
