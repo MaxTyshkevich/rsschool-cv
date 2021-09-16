@@ -93,15 +93,14 @@
             >
             <pre>
             <code>
-            function antiOptimizeAsync(task) {
-              let start = Date.now();
-              return Promise.resolve(task())
-                .then(res => new Promise(resolve => {
-                  setTimeout(
-                    ()=> resolve(res),
-                     11300 - (Date.now() - start))
-                }))
-            }
+function antiOptimizeAsync(task) {
+  let start = Date.now();
+  return Promise.resolve(task())
+    .then(res => new Promise(resolve => {
+      setTimeout(()=> resolve(res),
+        11300 - (Date.now() - start))
+      }))
+}
             </code>
           </pre>
           </article>
@@ -112,14 +111,14 @@
             >
             <pre>
             <code>
-            function compose(...func) {
-              return (...args) => {
-                return func.reduceRight((result,fn) => {
-                  result = fn(...result)
-                  return [result];
-                },args);
-              }
-            }
+  function compose(...func) {
+    return (...args) => {
+      return func.reduceRight((result,fn) => {
+        result = fn(...result)
+        return [result];
+      },args);
+    }
+  }
           
             </code>
             </pre>
