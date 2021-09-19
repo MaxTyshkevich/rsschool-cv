@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML, CSS & Git Basics</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <div class="page">
+      <div class="menu">
+        <button class="menu__hamburger hamburger">
+          <span class="hamburger__line"></span>
+        </button>
+        <ul class="menu__list">
+          <li><a href="#info">info</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#lang">lang</a></li>
+          <li><a href="#code">code</a></li>
+          <li><a href="#education">education</a></li>
+        </ul>
+      </div>
+      <aside class="aside">
+        <div class="photo">
+          <img src="./photo-makson.jpg" alt="my-photo" />
+        </div>
+        <section class="info" id="info">
+          <h3 class="sub-title sub-title--light">contact me</h3>
+          <ul class="list">
+            <li>
+              <span class="font-bold">City:</span>
+              <span class="list__description">Minsk, Belarus.</span>
+            </li>
+            <li>
+              <span class="font-bold">Phone:</span
+              ><a class="list__description list__link" href="tel:+375256568852"
+                >+375(25) 656 88 52</a
+              >
+            </li>
+            <li>
+              <span class="font-bold">Email:</span
+              ><a
+                class="list__description list__link"
+                href="mailto:2842778@gmail.com"
+                >2842778@gmail.com</a
+              >
+            </li>
+            <li>
+              <span class="font-bold">Discord:</span
+              ><a class="list__description" href="#">MaxPayne#9870</a>
+            </li>
+            <li>
+              <span class="font-bold">Git:</span
+              ><a
+                class="list__description"
+                href="https://github.com/MaxTyshkevich"
+              >
+                MaxTyshkevich</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="skills" id="skills">
+          <h3 class="sub-title sub-title--light">Skills</h3>
+          <div class="skills-container">
+            <ul class="list">
+              <li>
+                <label class="list__wrap">
+                  <span class="list__description">html</span>
+                  <progress value="73" max="100"></progress>
+                </label>
+              </li>
+              <li>
+                <label class="list__wrap">
+                  <span class="list__description">css</span>
+                  <progress value="70" max="100"></progress>
+                </label>
+              </li>
+              <li>
+                <label class="list__wrap">
+                  <span class="list__description">scss</span>
+                  <progress value="80" max="100"></progress>
+                </label>
+              </li>
+              <li>
+                <label class="list__wrap">
+                  <span class="list__description">git</span>
+                  <progress value="75" max="100"></progress>
+                </label>
+              </li>
+              <li>
+                <label class="list__wrap">
+                  <span class="list__description">javascript</span>
+                  <progress value="80" max="100"></progress>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="lang" id="lang">
+          <h3 class="sub-title sub-title--light">English</h3>
+          <p>
+            Basic User. Upgrade skills in applications. Duolingo and Polyglot
+          </p>
+        </section>
+      </aside>
+      <main class="main">
+        <header class="header">
+          <h1 class="name">Maksim Tyshkevich</h1>
+          <h2 class="work">frontend developer</h2>
+        </header>
+        <section class="code" id="code">
+          <h3 class="sub-title sub-title--dark">Code examples</h3>
+          <article>
+            <h4>Task:</h4>
+            <a href="https://www.codewars.com/kata/58d014421c694f71630000bc"
+              >I Promise Not To Optimize</a
+            >
+            <pre class="code__exam">
+            <code >
+function antiOptimizeAsync(task) {
+  let start = Date.now();
+  return Promise.resolve(task())
+    .then(res => new Promise(resolve => {
+      setTimeout(()=> resolve(res),
+        11300 - (Date.now() - start))
+      }))
+}
+            </code>
+          </pre>
+          </article>
+          <article>
+            <h4>Task:</h4>
+            <a href="https://www.codewars.com/kata/5421c6a2dda52688f6000af8"
+              >Function Composition</a
+            >
+            <pre class="code__exam">
+            <code>
+  function compose(...func) {
+    return (...args) => {
+      return func.reduceRight((result,fn) => {
+        result = fn(...result)
+        return [result];
+      },args);
+    }
+  }
+          
+            </code>
+            </pre>
+          </article>
+        </section>
+        <section class="education" id="education">
+          <h3 class="sub-title sub-title--dark">Education</h3>
+          <p>
+            Secondary special, profession: mechatronics. Solving algorithms
+            Profile
+            <a href="https://www.codewars.com/users/Max%20Tyshkevich"
+              >codewars</a
+            >
+          </p>
+        </section>
+      </main>
+      <footer class="footer">
+        <a href="https://github.com/MaxTyshkevich">My github</a>
+        <a class="logo" href="https://rs.school/js/">
+          <img src="./rs_school_js.svg" alt="logo-rschool"
+        /></a>
+        <p>Дата создания:<time datetime="2021">2021</time></p>
+      </footer>
+    </div>
+    <script>
+      console.log(`Самооценка CV:
+      Ваша оценка - 145 баллов 
+Отзыв по пунктам ТЗ:
+Не выполненные/не засчитанные пункты:
+1) есть видеорезюме автора CV на английском языке. Видеорезюме встраивается в страницу CV как видео, а не в виде кнопки или ссылки. Продолжительность видео 3-5 минут (±15 секунд). В описание видео на YouTube добавлена ссылка на его транскрипцию на английском языке (например, в документе Google Docs). 
+
+Частично выполненные пункты:
+1) CV содержит изображения-ссылки на выполненные вами проекты. При клике по изображению страница проекта открывается в новой вкладке. У каждого проекта есть название, небольшое описание, указан перечень используемых технологий 
+
+Выполненные пункты:
+1) вёрстка валидная. Проверить валидность вёрстки: https://validator.w3.org/ 
+
+2) вёрстка семантическая. В коде страницы присутствуют семантические теги HTML5, например, article, aside, figure, figcaption, footer, header, main, nav, section, используются заголовки h1-h6. 2 балла за каждый уникальный семантический тег HTML5 и за каждый уникальный заголовок h1-h6, но не больше 20 баллов. Заголовок h1 может быть только один 
+
+3) для оформления СV используются css-стили. 1 балл за каждый стилизованный элемент, но не больше 10 баллов 
+
+4) контент размещается в блоке, который горизонтально центрируется на странице. Фоновый цвет, если он есть, тянется во всю ширину страницы 
+
+5) вёрстка адаптивная: ни на одном из разрешений экрана до 320px включительно не появляется горизонтальная полоса прокрутки, при этом всё содержание страницы сохраняется 
+
+6) есть адаптивное бургер-меню. Ссылки в пунктах меню ведут на основные разделы CV. При кликах по пунктам меню реализована плавная прокрутка по якорям. При уменьшении ширины экрана меню становится адаптивным. 
+
+7) на странице СV присутствует изображение - фото или аватарка автора CV, пропорции изображения не искажены, у изображения есть атрибут alt (может быть пустым) 
+
+8) контакты для связи и перечень навыков оформлены в виде списка ul > li 
+
+9) CV содержит контакты, краткую информацию о себе, навыки, образование, уровень английского 
+
+10) CV содержит пример вашего кода (например, решение задачи с сайта codewars) с подсветкой кода 
+
+11) CV выполнено на английском языке 
+
+12) выполнены требования к репозиторию: есть ссылка на задание, скриншот страницы СV, ссылка на деплой страницы CV на GitHub Pages, указана дата дедлайна, выполнена самооценка (самооценку расписываем по пунктам критериев оценки, указывая балл за каждый пункт) 
+
+13) дизайн, оформление, качество выполнения CV не ниже чем в примерах CV, приведённых в материалах к заданию 
+
+
+      
+      
+      `);
+      (() => {
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+        const menuLiks = menu.querySelectorAll('a');
+        hamburger.addEventListener('click', (e) => {
+          e.preventDefault();
+          menu.classList.toggle('is-open');
+        });
+
+        menuLiks.forEach((link) => {
+          link.addEventListener('click', () =>
+            menu.classList.remove('is-open')
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
