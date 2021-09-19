@@ -9,70 +9,96 @@
   </head>
   <body>
     <div class="page">
+      <div class="menu">
+        <button class="menu__hamburger hamburger">
+          <span class="hamburger__line"></span>
+        </button>
+        <ul class="menu__list">
+          <li><a href="#info">info</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#lang">lang</a></li>
+          <li><a href="#code">code</a></li>
+          <li><a href="#education">education</a></li>
+        </ul>
+      </div>
       <aside class="aside">
         <div class="photo">
           <img src="./photo-makson.jpg" alt="my-photo" />
         </div>
-        <section class="info">
+        <section class="info" id="info">
           <h3 class="sub-title sub-title--light">contact me</h3>
           <ul class="list">
-            <li><span class="font-bold">City:</span>Minsk, Belarus.</li>
+            <li>
+              <span class="font-bold">City:</span>
+              <span class="list__description">Minsk, Belarus.</span>
+            </li>
             <li>
               <span class="font-bold">Phone:</span
-              ><a href="tel:+375256568852">+375(25) 656 88 52</a>
+              ><a class="list__description list__link" href="tel:+375256568852"
+                >+375(25) 656 88 52</a
+              >
             </li>
             <li>
               <span class="font-bold">Email:</span
-              ><a href="mailto:2842778@gmail.com">2842778@gmail.com</a>
+              ><a
+                class="list__description list__link"
+                href="mailto:2842778@gmail.com"
+                >2842778@gmail.com</a
+              >
             </li>
             <li>
               <span class="font-bold">Discord:</span
-              ><a href="#">MaxPayne#9870</a>
+              ><a class="list__description" href="#">MaxPayne#9870</a>
             </li>
             <li>
               <span class="font-bold">Git:</span
-              ><a href="https://github.com/MaxTyshkevich"> MaxTyshkevich</a>
+              ><a
+                class="list__description"
+                href="https://github.com/MaxTyshkevich"
+              >
+                MaxTyshkevich</a
+              >
             </li>
           </ul>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
           <h3 class="sub-title sub-title--light">Skills</h3>
           <div class="skills-container">
             <ul class="list">
               <li>
-                <label>
-                  html
+                <label class="list__wrap">
+                  <span class="list__description">html</span>
                   <progress value="73" max="100"></progress>
                 </label>
               </li>
               <li>
-                <label>
-                  css
+                <label class="list__wrap">
+                  <span class="list__description">css</span>
                   <progress value="70" max="100"></progress>
                 </label>
               </li>
               <li>
-                <label>
-                  scss
+                <label class="list__wrap">
+                  <span class="list__description">scss</span>
                   <progress value="80" max="100"></progress>
                 </label>
               </li>
               <li>
-                <label>
-                  git
+                <label class="list__wrap">
+                  <span class="list__description">git</span>
                   <progress value="75" max="100"></progress>
                 </label>
               </li>
               <li>
-                <label>
-                  javascript
+                <label class="list__wrap">
+                  <span class="list__description">javascript</span>
                   <progress value="80" max="100"></progress>
                 </label>
               </li>
             </ul>
           </div>
         </section>
-        <section class="lang">
+        <section class="lang" id="lang">
           <h3 class="sub-title sub-title--light">English</h3>
           <p>
             Basic User. Upgrade skills in applications. Duolingo and Polyglot
@@ -84,14 +110,14 @@
           <h1 class="name">Maksim Tyshkevich</h1>
           <h2 class="work">frontend developer</h2>
         </header>
-        <section class="code">
+        <section class="code" id="code">
           <h3 class="sub-title sub-title--dark">Code examples</h3>
           <article>
             <h4>Task:</h4>
             <a href="https://www.codewars.com/kata/58d014421c694f71630000bc"
               >I Promise Not To Optimize</a
             >
-            <pre>
+            <pre class="code__exam">
             <code>
 function antiOptimizeAsync(task) {
   let start = Date.now();
@@ -109,7 +135,7 @@ function antiOptimizeAsync(task) {
             <a href="https://www.codewars.com/kata/5421c6a2dda52688f6000af8"
               >Function Composition</a
             >
-            <pre>
+            <pre class="code__exam">
             <code>
   function compose(...func) {
     return (...args) => {
@@ -124,7 +150,7 @@ function antiOptimizeAsync(task) {
             </pre>
           </article>
         </section>
-        <section class="education">
+        <section class="education" id="education">
           <h3 class="sub-title sub-title--dark">Education</h3>
           <p>
             Secondary special, profession: mechatronics. Solving algorithms
@@ -137,11 +163,32 @@ function antiOptimizeAsync(task) {
       </main>
       <footer class="footer">
         <a href="https://github.com/MaxTyshkevich">My github</a>
-        <div class="logo">
-          <img src="./rs_school_js.svg" alt="logo-rschool" />
-        </div>
-        <a href="https://rs.school/js/">Сourse</a>
+        <a class="logo" href="https://rs.school/js/">
+          <img src="./rs_school_js.svg" alt="logo-rschool"
+        /></a>
+        <p>Дата создания:<time datetime="2021">2021</time></p>
       </footer>
     </div>
+    <script>
+      console.log(`Самооценка CV:
+      
+      
+      
+      `)(() => {
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+        const menuLiks = menu.querySelectorAll('a');
+        hamburger.addEventListener('click', (e) => {
+          e.preventDefault();
+          menu.classList.toggle('is-open');
+        });
+
+        menuLiks.forEach((link) => {
+          link.addEventListener('click', () =>
+            menu.classList.remove('is-open')
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
