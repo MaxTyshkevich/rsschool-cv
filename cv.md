@@ -11,7 +11,8 @@
 ### Skills:
 
 - **Web technology** : - HTML. - CSS. - SCSS.
-- **Programming language** : - JavaScript.
+- **Programming language** : - JavaScript. - TypeScript.
+- **Library** : React . (React Redux Toolkit, React Routing v6)
 - **Version control system** : - Git.
 
 ### Code examples:
