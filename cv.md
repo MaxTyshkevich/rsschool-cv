@@ -43,15 +43,15 @@ function compose(...func) {
 ```
 
 ### Education:
-***2021q1***  Java Script/Front-end Score Points: 520.9 Completed Tasks:23/39
-***2021q1***  Java Script/Pre-School Score Points: 282.9 Completed Tasks:18/27
-***2021q1***  Java Script/Front-end Score Points: 520.9 Completed Tasks:23/39
-***2021q3***  Java Script/Front-end 2021q3 Score Points: 2,133.7 Completed Tasks:49/62
-***2021q3***  React / Front-end 2022q1 Score Points: 190 Completed Tasks:9/10
- ***2022***   React / Front-end 2022q1 Score Points: 190 Completed Tasks:9/10
- ***2022***   PHP Bacis
- ***2022***   React с нуля для начинающих (Михаил Непомнящий)
- ***2022***   На данный момент изучаю Node JS
+**2021q1**  Java Script/Front-end Score Points: 520.9 Completed Tasks:23/39
+**2021q1**  Java Script/Pre-School Score Points: 282.9 Completed Tasks:18/27
+**2021q1**  Java Script/Front-end Score Points: 520.9 Completed Tasks:23/39
+**2021q3**  Java Script/Front-end 2021q3 Score Points: 2,133.7 Completed Tasks:49/62
+**2021q3**  React / Front-end 2022q1 Score Points: 190 Completed Tasks:9/10
+ **2022**   React / Front-end 2022q1 Score Points: 190 Completed Tasks:9/10
+ **2022**   PHP Bacis
+ **2022**   React с нуля для начинающих (Михаил Непомнящий)
+ **2022**   На данный момент изучаю Node JS
 
 
 
